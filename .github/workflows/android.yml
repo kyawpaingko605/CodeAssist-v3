@@ -25,10 +25,13 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build -x test
 
-    - name: Upload APK Artifact
-      uses: actions/upload-artifact@v4
+    - name: Share APK on GitHub Releases
+      uses: marvinpinto/action-automatic-releases@latest
       with:
-        name: CodeAssist-APK
-        path: |
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "latest-build"
+        prerelease: true
+        title: "CodeAssist Nightly Build"
+        files: |
           **/build/outputs/apk/debug/*.apk
           **/build/outputs/apk/release/*.apk
