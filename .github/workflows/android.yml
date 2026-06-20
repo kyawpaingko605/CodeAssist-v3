@@ -6,7 +6,6 @@ on:
   pull_request:
     branches: [ "master" ]
 
-# ခွင့်ပြုချက်ပေးရန် ၎င်းအပိုင်းကို ထည့်သွင်းပါ
 permissions:
   contents: write
 
@@ -37,5 +36,4 @@ jobs:
         prerelease: true
         title: "CodeAssist Nightly Build"
         files: |
-          **/build/outputs/apk/debug/*.apk
-          **/build/outputs/apk/release/*.apk
+          **/*.apk
