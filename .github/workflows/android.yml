@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ "master" ]
 
+# ခွင့်ပြုချက်ပေးရန် ၎င်းအပိုင်းကို ထည့်သွင်းပါ
+permissions:
+  contents: write
+
 jobs:
   build:
 
