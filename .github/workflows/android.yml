@@ -26,9 +26,9 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
       
-    # ဒီနေရာမှာ အမှန်တကယ် APK ထွက်လာအောင် assembleDebug ကို ပြောင်းသုံးလိုက်ပါတယ်
+    # ပင်မ Android Module ဖြစ်တဲ့ :ide-android ကို တိုက်ရိုက် build ခိုင်းလိုက်ပါတယ်
     - name: Build APK with Gradle
-      run: ./gradlew assembleDebug
+      run: ./gradlew :ide-android:assembleDebug
 
     - name: Share APK on GitHub Releases
       uses: marvinpinto/action-automatic-releases@latest
