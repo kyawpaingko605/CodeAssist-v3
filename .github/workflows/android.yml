@@ -29,7 +29,7 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build -x test
 
-    # ထွက်လာတဲ့ JAR ဖိုင်တွေကို အကုန်လုံး သိမ်းဆည်းပြီး Release ထဲ တင်ပေးမှာဖြစ်ပါတယ်
+    # Project ရဲ့ ဘယ်အောက်မှာပဲရှိရှိ ထွက်လာသမျှ .jar ရော .apk ရော အကုန်လုံးကို သိမ်းခိုင်းလိုက်ပါတယ်
     - name: Share Output on GitHub Releases
       uses: marvinpinto/action-automatic-releases@latest
       with:
@@ -38,4 +38,5 @@ jobs:
         prerelease: true
         title: "CodeAssist Nightly Build"
         files: |
-          **/build/libs/*.jar
+          **/*.jar
+          **/*.apk
