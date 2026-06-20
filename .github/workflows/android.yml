@@ -29,7 +29,7 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build -x test
 
-    # Project ရဲ့ ဘယ်အောက်မှာပဲရှိရှိ ထွက်လာသမျှ .jar ရော .apk ရော အကုန်လုံးကို သိမ်းခိုင်းလိုက်ပါတယ်
+    # မရှိတဲ့ .apk ကို ဖြုတ်ပြီး .jar တစ်မျိုးတည်းကိုပဲ အမှားကင်းအောင် တင်ခိုင်းလိုက်ပါတယ်
     - name: Share Output on GitHub Releases
       uses: marvinpinto/action-automatic-releases@latest
       with:
@@ -39,4 +39,3 @@ jobs:
         title: "CodeAssist Nightly Build"
         files: |
           **/*.jar
-          **/*.apk
